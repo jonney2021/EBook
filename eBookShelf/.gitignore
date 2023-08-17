@@ -1,0 +1,171 @@
+# .NET Core
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.user
+*.build
+bin/
+obj/
+.vscode/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# NuGet
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+.idea/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+.idea/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+.idea/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+.idea/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+.idea/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+.idea/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+.idea/
+
+# User-specific files
+*.suo
+*.userprefs
+*.sln.docstates
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Tye
+.tye/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# macOS
+.DS_Store
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Rider
+.idea/
+*.sln.iml
