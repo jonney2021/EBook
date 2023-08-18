@@ -1,5 +1,5 @@
-﻿using eBookShelf.Data;
-using eBookShelf.Models;
+﻿using Book.DataAccess.Data;
+using Book.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eBookShelf.Controllers

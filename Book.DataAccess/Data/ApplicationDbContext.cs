@@ -1,7 +1,7 @@
-﻿using eBookShelf.Models;
+﻿using Book.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace eBookShelf.Data
+namespace Book.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {
