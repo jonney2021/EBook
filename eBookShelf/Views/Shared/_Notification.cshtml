@@ -1,0 +1,17 @@
+﻿@if (TempData["success"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script>
+        var notyf = new Notyf();
+        notyf.success('@TempData["success"]');
+    </script>
+}
+
+@if (TempData["error"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script>
+        var notyf = new Notyf();
+        notyf.error('@TempData["error"]');
+    </script>
+}

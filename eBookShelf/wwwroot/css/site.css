@@ -20,3 +20,24 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* search icon in navbar */
+.custom-search-input {
+    position: relative;
+}
+
+.custom-search-input input[type="search"] {
+    padding-left: 2em; /* Space for the icon */
+}
+
+.custom-search-input .icon {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    transform: translateY(-50%);
+}
+
+/* listing icons gap */
+.icons-group {
+    margin-right: 5rem;
+}
