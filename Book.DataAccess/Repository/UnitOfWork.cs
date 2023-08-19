@@ -1,26 +1,28 @@
 ﻿using Book.DataAccess.Data;
 using Book.DataAccess.Repository.IRepository;
-using Book.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Book.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<Category>, IRepository.ICategoryRepository
+    public class UnitOfWork : IUnitOfWork
     {
         private ApplicationDbContext _db;
-        public CategoryRepository(ApplicationDbContext db) : base(db)
+        public ICategoryRepository Category { get; private set; }
+        public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
+            Category = new CategoryRepository(_db);
         }
 
-        public void Update(Category obj)
+        public ICategoryRepository CategoryRepository { get; private set; }
+
+        public void Save()
         {
-            _db.Categories.Update(obj);
+            _db.SaveChanges();
         }
     }
 }
