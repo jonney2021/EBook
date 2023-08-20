@@ -18,92 +18,156 @@ namespace Book.DataAccess.Data
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
                 new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
-                new Category { Id = 3, Name = "History", DisplayOrder = 3 }
+                new Category { Id = 3, Name = "History", DisplayOrder = 3 },
+                new Category { Id = 4, Name = "Mystery", DisplayOrder = 4 },
+                new Category { Id = 5, Name = "Fantasy", DisplayOrder = 5 },
+                new Category { Id = 6, Name = "Romance", DisplayOrder = 6 },
+                new Category { Id = 7, Name = "Thriller", DisplayOrder = 7 },
+                new Category { Id = 8, Name = "Horror", DisplayOrder = 8 },
+                new Category { Id = 9, Name = "Adventure", DisplayOrder = 9 },
+                new Category { Id = 10, Name = "Historical Fiction", DisplayOrder = 10 },
+                new Category { Id = 11, Name = "Science", DisplayOrder = 11 }
                 );
 
             modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
                     Id = 1,
-                    Title = "Fortune of Time",
-                    Author = "Billy Spark",
-                    Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                    ISBN = "SWD9999001",
-                    ListPrice = 99,
-                    Price = 90,
-                    Price50 = 85,
-                    Price100 = 80,
-                    CategoryId = 1,
+                    Title = "Harry Potter",
+                    Author = "J.K. Rowling",
+                    Description = "The first book in the Harry Potter series, following the young wizard Harry as he embarks on a magical journey.",
+                    ISBN = "9780439554930",
+                    ListPrice = 20,
+                    Price = 15,
+                    Price50 = 12,
+                    Price100 = 10,
+                    CategoryId = 2, // Fantasy
                     ImageUrl = ""
                 },
                 new Product
                 {
                     Id = 2,
-                    Title = "Dark Skies",
-                    Author = "Nancy Hoover",
-                    Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                    ISBN = "CAW777777701",
-                    ListPrice = 40,
-                    Price = 30,
-                    Price50 = 25,
-                    Price100 = 20,
-                    CategoryId = 2,
+                    Title = "The Da Vinci Code",
+                    Author = "Dan Brown",
+                    Description = "A thriller novel that combines art, history, and religion, following Robert Langdon as he unravels a mystery.",
+                    ISBN = "9780385504201",
+                    ListPrice = 25,
+                    Price = 20,
+                    Price50 = 18,
+                    Price100 = 15,
+                    CategoryId = 7, // Thriller
                     ImageUrl = ""
                 },
                 new Product
                 {
                     Id = 3,
-                    Title = "Vanish in the Sunset",
-                    Author = "Julian Button",
-                    Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                    ISBN = "RITO5555501",
-                    ListPrice = 55,
-                    Price = 50,
-                    Price50 = 40,
-                    Price100 = 35,
-                    CategoryId = 1,
+                    Title = "Pride and Prejudice",
+                    Author = "Jane Austen",
+                    Description = "A classic romance novel that explores societal norms and love through the story of Elizabeth Bennet and Mr. Darcy.",
+                    ISBN = "9780141439518",
+                    ListPrice = 15,
+                    Price = 12,
+                    Price50 = 10,
+                    Price100 = 8,
+                    CategoryId = 6, // Romance
                     ImageUrl = ""
                 },
                 new Product
                 {
                     Id = 4,
-                    Title = "Cotton Candy",
-                    Author = "Abby Muscles",
-                    Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                    ISBN = "WS3333333301",
-                    ListPrice = 70,
-                    Price = 65,
-                    Price50 = 60,
-                    Price100 = 55,
-                    CategoryId = 3,
+                    Title = "The Lord of the Rings: The Fellowship of the Ring",
+                    Author = "J.R.R. Tolkien",
+                    Description = "The first book in The Lord of the Rings trilogy, following the journey of Frodo Baggins to destroy the One Ring.",
+                    ISBN = "9780618346257",
+                    ListPrice = 18,
+                    Price = 14,
+                    Price50 = 12,
+                    Price100 = 10,
+                    CategoryId = 5, // Fantasy
                     ImageUrl = ""
                 },
                 new Product
                 {
                     Id = 5,
-                    Title = "Rock in the Ocean",
-                    Author = "Ron Parker",
-                    Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                    ISBN = "SOTJ1111111101",
-                    ListPrice = 30,
-                    Price = 27,
-                    Price50 = 25,
-                    Price100 = 20,
-                    CategoryId = 2,
+                    Title = "Gone Girl",
+                    Author = "Gillian Flynn",
+                    Description = "A psychological thriller that delves into the complexities of a marriage and the mystery behind a woman's disappearance.",
+                    ISBN = "9780307588364",
+                    ListPrice = 17,
+                    Price = 14,
+                    Price50 = 12,
+                    Price100 = 10,
+                    CategoryId = 4, // Mystery
                     ImageUrl = ""
                 },
                 new Product
                 {
                     Id = 6,
-                    Title = "Leaves and Wonders",
-                    Author = "Laura Phantom",
-                    Description = "Praesent vitae sodales libero. Praesent molestie orci augue, vitae euismod velit sollicitudin ac. Praesent vestibulum facilisis nibh ut ultricies.\r\n\r\nNunc malesuada viverra ipsum sit amet tincidunt. ",
-                    ISBN = "FOT000000001",
-                    ListPrice = 25,
-                    Price = 23,
-                    Price50 = 22,
-                    Price100 = 20,
-                    CategoryId = 3,
+                    Title = "The Hitchhiker's Guide to the Galaxy",
+                    Author = "Douglas Adams",
+                    Description = "A comedic science fiction series that follows the misadventures of Arthur Dent after Earth's destruction.",
+                    ISBN = "9780345391803",
+                    ListPrice = 14,
+                    Price = 12,
+                    Price50 = 10,
+                    Price100 = 8,
+                    CategoryId = 11, // Science
+                    ImageUrl = ""
+                },
+                new Product
+                {
+                    Id = 7,
+                    Title = "The Shining",
+                    Author = "Stephen King",
+                    Description = "A horror novel that follows a family's terrifying experiences in an isolated hotel during the winter.",
+                    ISBN = "9780385121675",
+                    ListPrice = 22,
+                    Price = 18,
+                    Price50 = 15,
+                    Price100 = 12,
+                    CategoryId = 8, // Horror
+                    ImageUrl = ""
+                },
+                new Product
+                {
+                    Id = 8,
+                    Title = "The Martian",
+                    Author = "Andy Weir",
+                    Description = "A science fiction novel about an astronaut's struggle to survive on Mars after being left behind by his crew.",
+                    ISBN = "9780553418026",
+                    ListPrice = 16,
+                    Price = 14,
+                    Price50 = 12,
+                    Price100 = 10,
+                    CategoryId = 11, // Science
+                    ImageUrl = ""
+                },
+                new Product
+                {
+                    Id = 9,
+                    Title = "The Girl on the Train",
+                    Author = "Paula Hawkins",
+                    Description = "A psychological thriller that revolves around the lives of three women and a mystery that unfolds through their perspectives.",
+                    ISBN = "9781594634024",
+                    ListPrice = 19,
+                    Price = 15,
+                    Price50 = 13,
+                    Price100 = 11,
+                    CategoryId = 4, // Mystery
+                    ImageUrl = ""
+                },
+                new Product
+                {
+                    Id = 10,
+                    Title = "The Hobbit",
+                    Author = "J.R.R. Tolkien",
+                    Description = "A fantasy adventure novel that follows Bilbo Baggins on his journey to help a group of dwarves reclaim their homeland.",
+                    ISBN = "9780547928227",
+                    ListPrice = 21,
+                    Price = 18,
+                    Price50 = 16,
+                    Price100 = 14,
+                    CategoryId = 5, // Fantasy
                     ImageUrl = ""
                 }
                 );
