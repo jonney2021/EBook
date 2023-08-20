@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/eBookShelf.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
 </head>
 <body>
     <header>
@@ -37,15 +38,15 @@
             </div>
         </nav>
         <nav class="nav nav-tabs justify-content-center mb-3">
-            <ul class="nav nav-tabs" role="tablelist">
+            <ul class="nav nav-tabs" role="tabllist">
                 <li class="nav-item">
                     <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">eBooks</a>
-                    <div class="dropdown-menu" style="">
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Books</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">All eBooks</a>
+                        <a class="dropdown-item" href="#">blah</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
                     </div>
@@ -72,9 +73,13 @@
             2023 &copy; eBookShelf <i class="bi bi-book"></i>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.tiny.cloud/1/kwcy4sjkhq2gxhak1yp77dmmbvkhobsu37ex2zaizab0xmyf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
