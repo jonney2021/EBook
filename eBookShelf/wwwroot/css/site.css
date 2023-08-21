@@ -43,3 +43,19 @@ body {
     margin-left: 1rem;
     cursor: pointer;
 }
+
+/* register/login page */
+.divider-text:before,
+.divider-text:after {
+    color: white;
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #555;
+    margin: auto 0.25rem;
+    box-shadow: 0 -2px;
+}
+
+.custom-card-width {
+    max-width: 60%; /* Adjust the width value as needed */
+    margin: 0 auto; /* Center the card horizontally */
+}
