@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Book.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<Category>, IRepository.ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         private ApplicationDbContext _db;
         public CategoryRepository(ApplicationDbContext db) : base(db)

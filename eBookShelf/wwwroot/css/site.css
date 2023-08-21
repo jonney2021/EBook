@@ -56,6 +56,17 @@ body {
 }
 
 .custom-card-width {
-    max-width: 60%; /* Adjust the width value as needed */
+    max-width: 60%;
     margin: 0 auto; /* Center the card horizontally */
+}
+
+/* books displaying */
+.custom-card {
+    min-height: 600px;
+}
+
+.custom-card img {
+    max-height: 350px;
+    width: 100%; /* Ensure the image doesn't exceed its container */
+    object-fit: cover; /* Preserve the aspect ratio while filling the container */
 }
