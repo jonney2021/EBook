@@ -75,7 +75,7 @@ namespace Book.DataAccess.Data
                 new Product
                 {
                     Id = 4,
-                    Title = "The Lord of the Rings: The Fellowship of the Ring",
+                    Title = "The Lord of the Rings",
                     Author = "J.R.R. Tolkien",
                     Description = "The first book in The Lord of the Rings trilogy, following the journey of Frodo Baggins to destroy the One Ring.",
                     ISBN = "9780618346257",
@@ -103,14 +103,14 @@ namespace Book.DataAccess.Data
                 new Product
                 {
                     Id = 6,
-                    Title = "The Hitchhiker's Guide to the Galaxy",
-                    Author = "Douglas Adams",
-                    Description = "A comedic science fiction series that follows the misadventures of Arthur Dent after Earth's destruction.",
-                    ISBN = "9780345391803",
-                    ListPrice = 14,
-                    Price = 12,
-                    Price50 = 10,
-                    Price100 = 8,
+                    Title = "Ender's Game",
+                    Author = "Orson Scott Card",
+                    Description = "A science fiction novel that follows the story of Ender Wiggin, a young boy trained in a military academy to fight against an alien species.",
+                    ISBN = "9780812550702",
+                    ListPrice = 12,
+                    Price = 10,
+                    Price50 = 8,
+                    Price100 = 7,
                     CategoryId = 11, // Science
                     ImageUrl = ""
                 },

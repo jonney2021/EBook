@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230820234639_SeedDataToDb")]
-    partial class SeedDataToDb
+    [Migration("20230821131607_AddCategorynProductTablesToDbnSeedTables")]
+    partial class AddCategorynProductTablesToDbnSeedTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -218,7 +218,7 @@ namespace Book.DataAccess.Migrations
                             Price = 14.0,
                             Price100 = 10.0,
                             Price50 = 12.0,
-                            Title = "The Lord of the Rings: The Fellowship of the Ring"
+                            Title = "The Lord of the Rings"
                         },
                         new
                         {
@@ -237,16 +237,16 @@ namespace Book.DataAccess.Migrations
                         new
                         {
                             Id = 6,
-                            Author = "Douglas Adams",
+                            Author = "Orson Scott Card",
                             CategoryId = 11,
-                            Description = "A comedic science fiction series that follows the misadventures of Arthur Dent after Earth's destruction.",
-                            ISBN = "9780345391803",
+                            Description = "A science fiction novel that follows the story of Ender Wiggin, a young boy trained in a military academy to fight against an alien species.",
+                            ISBN = "9780812550702",
                             ImageUrl = "",
-                            ListPrice = 14.0,
-                            Price = 12.0,
-                            Price100 = 8.0,
-                            Price50 = 10.0,
-                            Title = "The Hitchhiker's Guide to the Galaxy"
+                            ListPrice = 12.0,
+                            Price = 10.0,
+                            Price100 = 7.0,
+                            Price50 = 8.0,
+                            Title = "Ender's Game"
                         },
                         new
                         {
