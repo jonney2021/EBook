@@ -6,20 +6,20 @@ $(document).ready(function () {
 
 function loadDataTable() {
     dataTable = $('#tblData').DataTable({
-        "ajax": { url:'/admin/product/getall'},
+        "ajax": { url:'/admin/company/getall'},
         "columns": [
-        { data: 'title', "width": "30%" },
-        { data: 'isbn', "width": "20%" },
-        { data: 'listPrice', "width": "10%" },
-        { data: 'author', "width": "20%" },
-        { data: 'category.name', "width": "15%" },
+        { data: 'name', "width": "15%" },
+        { data: 'streetAddress', "width": "15%" },
+        { data: 'city', "width": "15%" },
+        { data: 'province', "width": "15%" },
+        { data: 'phoneNumber', "width": "15%" },
             {
                 data: 'id',
                 "render": function (data) {
                     return `
                     <div class="w-75 btn-group" role="group">
-                        <a href="/admin/product/upsert?id=${data}" class="icons-group mr-3"><i class="bi bi-pencil-square"></i></a >
-                        <a onClick="Delete('/admin/product/delete/${data}')" class="icons-group"><i class="bi bi-trash3"></i></a>
+                        <a href="/admin/company/upsert?id=${data}" class="icons-group mr-3"><i class="bi bi-pencil-square"></i></a >
+                        <a onClick="Delete('/admin/company/delete/${data}')" class="icons-group"><i class="bi bi-trash3"></i></a>
                     </div >`;
                 },
                 "width": "5%"
