@@ -14,10 +14,10 @@ namespace Book.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly Data.ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
         internal DbSet<T> dbSet;
 
-        public Repository(Data.ApplicationDbContext db)
+        public Repository(ApplicationDbContext db)
         {
             _db = db;
             this.dbSet = _db.Set<T>(); // equals to _db.Categories == dbSet;
