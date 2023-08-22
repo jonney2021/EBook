@@ -179,8 +179,7 @@ namespace eBookShelf.Areas.Admin.Controllers
             OrderHeader orderHeader = _unitOfWork.OrderHeader.Get(u => u.Id == orderHeaderId);
             if (orderHeader.PaymentStatus == SD.PaymentStatusDelayedPayment)
             {
-                //this is an order by company
-
+                // an order by company
                 var service = new SessionService();
                 Session session = service.Get(orderHeader.SessionId);
 
