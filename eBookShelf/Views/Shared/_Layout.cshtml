@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - eBookShelf</title>
+    <title><a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">@ViewData["Title"] - eBookShelf</a></title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/eBookShelf.styles.css" asp-append-version="true" />
@@ -46,25 +46,27 @@
         </nav>
         <nav class="nav nav-tabs justify-content-center mb-3">
             <ul class="nav nav-tabs" role="tabllist">
-                <li class="nav-item">
+@*                 <li class="nav-item">
                     <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
-                </li>
-                @* @if (User.IsInRole(SD.Role_Admin))
-                { *@
+                </li> *@
+                @if (User.IsInRole(SD.Role_Admin))
+                {
                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Manage</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Manage Content</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">eBooks</a>
-                            <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                            <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>                        
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                        <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
                         </div>
-                   </li> 
-               @*  } *@
-                
-@*                 <li class="nav-item">
-                    <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
-                </li> *@
+                   </li>
+                }
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">eBooks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">My Orders</a>
+                </li>
                 @* TODO: BEST SELLER *@
                 <li class="nav-item">
                     <a class="nav-link" asp-area="Customer" asp-controller="BestSeller" asp-action="Index">Best Seller</a>
@@ -80,7 +82,7 @@
     </div>
 
     <footer class="border-top footer bg-primary text-muted">
-        <div class="container">
+        <div class="container text-center">
             2023 &copy; eBookShelf <i class="bi bi-book"></i>
         </div>
     </footer>
