@@ -13,8 +13,8 @@ using System.Security.Claims;
 namespace eBookShelf.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-    [Authorize]
-	public class OrderController : Controller
+    [Authorize(Roles = SD.Role_Admin)]
+    public class OrderController : Controller
 	{
 		private readonly IUnitOfWork _unitOfWork;
         [BindProperty]
