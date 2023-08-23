@@ -48,21 +48,33 @@
                 @if (User.IsInRole(SD.Role_Admin))
                 {
                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Manage Content</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Management</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">eBooks</a>
-                            <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>                        
-                            <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Company" asp-action="Index">Company</a>
+                            <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Categories</a>
+                            <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="User" asp-action="Index">Users</a>
+                            <a class="dropdown-item text-dark" asp-area="Admin" asp-controller="Company" asp-action="Index">Companies</a>
+                            <div class="dropdown-divider"></div>                            
+                            <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a>
                         </div>
                    </li>
                 }
                 <li class="nav-item">
                     <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">eBooks</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">My Orders</a>
-                </li>
+                @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Orders</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">My Orders</a>
+                    </li>
+                }
+                
                 @* TODO: BEST SELLER *@
                 <li class="nav-item">
                     <a class="nav-link" asp-area="Customer" asp-controller="BestSeller" asp-action="Index">Best Seller</a>
@@ -89,6 +101,7 @@
     <script src="https://cdn.tiny.cloud/1/kwcy4sjkhq2gxhak1yp77dmmbvkhobsu37ex2zaizab0xmyf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" asp-append-version="true"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
