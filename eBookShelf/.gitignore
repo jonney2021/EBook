@@ -9,6 +9,14 @@ bin/
 obj/
 .vscode/
 
+# Ignore appsettings.json
+appsettings.json
+
+# Ignore appsettings files for specific environments (if applicable)
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+
 # User-specific files
 *.suo
 *.userprefs
