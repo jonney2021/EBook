@@ -2,7 +2,7 @@
 This is an EBookStore application.
 
 Admin:
-admin@email.com/TestAdmin@email.com
+admin@email.com
 Admin@123
 
 Customer:
